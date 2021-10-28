@@ -39,6 +39,9 @@ async function run() {
             const service = await servicesCollection.findOne(query)
             res.json(service)
         })
+        app.get('/hello', (req, res) => {
+            res.send('hello updated')
+        })
 
 
         //   Post Api
