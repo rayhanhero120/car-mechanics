@@ -39,9 +39,7 @@ async function run() {
             const service = await servicesCollection.findOne(query)
             res.json(service)
         })
-        app.get('/hello', (req, res) => {
-            res.send('hello updated')
-        })
+
 
 
         //   Post Api
@@ -76,6 +74,9 @@ run().catch(console.dir)
 
 app.get('/', (req, res) => {
     res.send('running genius server')
+})
+app.get('/hello', (req, res) => {
+    res.send('hello updated')
 })
 
 app.listen(port, () => {
